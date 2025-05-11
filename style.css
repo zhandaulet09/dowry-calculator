@@ -1,0 +1,89 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.subheading {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.form-group, fieldset {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+select, input[type="radio"], input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fdfdfd;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#result {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #999;
+  margin-top: 40px;
+}
+
+.required {
+  color: #c0392b;
+  font-size: 0.85rem;
+  margin-left: 5px;
+  font-weight: normal;
+}

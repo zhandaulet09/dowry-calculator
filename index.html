@@ -1,5 +1,88 @@
 <!DOCTYPE html>
-<html>
-<head><title>Dowry Calculator</title></head>
-<body>Hello</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dowry Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Dowry Price Estimator</h1>
+            <p class="subheading">An academic simulation to understand social factors in historical marriage systems</p>
+        </header>
+
+        <form id="dowryForm">
+            <div class="form-group">
+                <label for="education">Education Level</label>
+                <select id="education" required>
+                    <option value="" disabled selected>-- select --</option>
+                    <option value="1.5">Undergraduate</option>
+                    <option value="1.2">College</option>
+                    <option value="1.05">High School</option>
+                    <option value="0.9">Middle School</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="wealth">Family Net Worth</label>
+                <select id="wealth" required>
+                    <option value="" disabled selected>-- select --</option>
+                    <option value="2">Above $10,000</option>
+                    <option value="1.5">$5,000 – $10,000</option>
+                    <option value="1.2">Below $5,000</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="caste">Caste</label>
+                <select id="caste" required>
+                    <option value="" disabled selected>-- select --</option>
+                    <option value="100">Brahmin</option>
+                    <option value="50">Kshatriya</option>
+                    <option value="20">Vaishya</option>
+                    <option value="10">Shudra</option>
+                    <option value="-50">Untouchable</option>
+                </select>
+            </div>
+
+            <fieldset class="form-group">
+                <legend>Skills <span class="required">(select at least one)</span></legend>
+                <label><input type="checkbox" class="skills" value="10" /> Plays instrument</label>
+                <label><input type="checkbox" class="skills" value="20" /> Good cook</label>
+                <label><input type="checkbox" class="skills" value="15" /> Easygoing</label>
+                <label><input type="checkbox" class="skills" value="10" /> Sings well</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <legend>Age Range</legend>
+                <label><input type="radio" name="age" value="1.5" required /> 18–23</label>
+                <label><input type="radio" name="age" value="1.2" /> 24–27</label>
+                <label><input type="radio" name="age" value="0.95" /> 28+</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <legend>Reputation</legend>
+                <label><input type="checkbox" class="reputation" value="0.85" /> Gossips about parents</label>
+                <label><input type="checkbox" class="reputation" value="0.9" /> Gossips about character</label>
+                <label><input type="checkbox" class="reputationFix" value="-20" /> General gossip</label>
+            </fieldset>
+
+            <div class="form-group">
+                <button type="button" onclick="calculateDowry()">Calculate Final Price</button>
+            </div>
+
+            <div id="result"></div>
+        </form>
+
+        <footer>
+            <p class="disclaimer">
+                This tool is for educational demonstration only. The dowry system is unjust and widely condemned.
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
